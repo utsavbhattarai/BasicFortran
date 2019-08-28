@@ -1,6 +1,6 @@
 Program P1
         implicit none
-        integer  n, m, loopStopper
+        integer  n, m, loopStopper, p
         loopStopper = 0
         n= 10
         m = 0
@@ -21,7 +21,7 @@ Program P1
                         case(0)
                                 Exit
                 end select
-                        WRITE (*,*) "Please enter the number below for conversion."
+                        WRITE (*,*) "Please enter the number below for conversi$
                         read (*,*) m
                 select case(n)
                         case(1)
@@ -38,10 +38,10 @@ Program P1
                         WRITE (*,*) 3.28084 * m
                         case(5)
                         WRITE (*,*) "Fahrenheit to Celsius"
-                        WRITE (*,*) (m-32) * (5/9)
+                        WRITE (*,*)  (m-32) * 0.5556
                         case(6)
                         WRITE (*,*) "Celsius to Fahrenheit"
-                        WRITE (*,*) (m * (9/5)) + 32
+                        WRITE (*,*) (m * (9.0/5.0)) + 32
                         end select
         end do
         WRITE (*,*) "Program Exit"
